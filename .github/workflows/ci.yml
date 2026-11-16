@@ -18,7 +18,7 @@ jobs:
           node-version: 24
           cache: pnpm
           cache-dependency-path: frontend/pnpm-lock.yaml
-      - uses: extractions/setup-just@v2
+      - uses: extractions/setup-just@v4
       - run: cd backend && uv sync
       - run: cd frontend && pnpm install --frozen-lockfile
       - run: just gen-api
